@@ -35,3 +35,9 @@ def entries_to_vcards(entries: list[dict]):
                 country=entry_address.get('addressCountry', ''))
         cards.append(card)
     return cards
+
+
+@app.get("/search")
+def get_vcards(q: str):
+    entries = search_results(q)
+    cards = entries_to_vcards(entries)
