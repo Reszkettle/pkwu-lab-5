@@ -8,6 +8,7 @@ vobject = "*"
 fastapi = "*"
 requests = "*"
 uvicorn = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 
