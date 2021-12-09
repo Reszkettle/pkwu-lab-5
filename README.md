@@ -31,7 +31,7 @@ Web scraper for https://panoramafirm.pl/. Creates VCards from search results.
 
 #### **Response**
 
-On success it returns an array of stringified VCards
+On success it returns a JSON content that contains an array of stringified VCards
 
 ##### Sample Response
 
