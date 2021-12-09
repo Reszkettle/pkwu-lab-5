@@ -48,3 +48,8 @@ ul a:hover:after {
   left: -0.5em;
   border-left-color: #f9dd94;
 }
+
+.content {
+  width: 400px;
+  margin: 0 auto;
+}
