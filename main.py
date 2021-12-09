@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -41,3 +42,5 @@ def entries_to_vcards(entries: list[dict]):
 def get_vcards(q: str):
     entries = search_results(q)
     cards = entries_to_vcards(entries)
+    serialized_cards = [card.serialize() for card in cards]
+    return JSONResponse(content=serialized_cards)
