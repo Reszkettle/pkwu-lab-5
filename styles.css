@@ -50,3 +50,8 @@ ul a:hover:after {
   left: -0.5em;
   border-left-color: #f9dd94;
 }
+
+h1 {
+  margin: 0 auto;
+  width: fit-content;
+}
