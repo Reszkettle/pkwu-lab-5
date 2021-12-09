@@ -29,6 +29,9 @@ def entries_to_vcards(entries: list[dict]):
         if entry_address:
             address = card.add('adr')
             address.value = vobject.vcard.Address(
-                street=entry_address.get('streetAddress', ''), city=entry_address.get('addressLocality', ''), code=entry_address.get('postalCode', ''), country=entry_address.get('addressCountry', ''))
+                street=entry_address.get('streetAddress', ''),
+                city=entry_address.get('addressLocality', ''),
+                code=entry_address.get('postalCode', ''),
+                country=entry_address.get('addressCountry', ''))
         cards.append(card)
     return cards
