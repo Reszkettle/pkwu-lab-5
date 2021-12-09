@@ -15,6 +15,7 @@ def search_results(query: str):
 
 
 def entries_to_vcards(entries: list[dict]):
+    cards = []
     for entry in entries:
         card = vobject.vCard()
         card.add('fn').value = entry['name']
@@ -29,4 +30,5 @@ def entries_to_vcards(entries: list[dict]):
             address = card.add('adr')
             address.value = vobject.vcard.Address(
                 street=entry_address.get('streetAddress', ''), city=entry_address.get('addressLocality', ''), code=entry_address.get('postalCode', ''), country=entry_address.get('addressCountry', ''))
-        print(card.serialize())
+        cards.append(card)
+    return cards
